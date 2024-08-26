@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=New+Amsterdam&display=swap');
+
+@keyframes write {0% {width: 0}}
+@keyframes mark {50% {box-shadow: 1rem 0 0 transparent}}
+
+@media (max-width: 768px) {
+    .container-pq {
+      width: 100%;
+    }
+  
+    .container {
+      flex-direction:row;
+    }
+  }
+
+:root {
+    font-family:Arial, Helvetica, sans-serif;
+    --fonte-destaque: 'New Amsterdam', sans-serif; 
+}
+
+* {
+    margin: 0;
+    padding: 0;  
+}
+      
+
+body {
+    background-image: linear-gradient(to bottom, black, gray, rgba(248, 248, 248, 0.516));
+}
+
+header {
+    color: white;
+    background-color: black;
+    min-height: 150px; 
+    text-align: center;
+    padding-top: 30px;
+       
+}
+
+header > h1 {
+    font-size: 2em;
+    font-weight: normal;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.315);
+}
+
+header > span {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#msg {
+    display:inline-block;
+    font-size: 1.3em;
+    font-weight: 700;
+    width: 20ch;
+    overflow: hidden;
+    color: white;
+    white-space: nowrap;
+    box-shadow: 0.1em 0 0 white;
+    animation: mark .5s step-end infinite alternate, write 3s steps(25,end);
+}
+
+nav > a  {
+    margin: 5px;
+    padding: 2px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+}
+
+nav > a:focus {
+    outline: 2px solid #9E4770;
+    outline-offset: 2px;
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.500);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;    
+}
+
+main > h1 {
+    text-align: center;
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main p { 
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+.center {
+    text-align: center;
+}
+
+.center > img {
+    margin: 5px;
+    text-align: center;
+    border-radius: 50%;
+    border: 5px solid #B8B0F5;
+}
+
+#caixa {    
+    display: flex;    
+    justify-content: center;    
+    align-items: center;    
+    height: 100%;    
+    min-width: 0;    
+    cursor: pointer; 
+    font-size: 5em;
+    font-family: var(--fonte-destaque); 
+    position: relative; 
+} 
+
+#fundo {    
+    color: black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}   
+
+#frente {    
+    color: black;  
+    background-color: white; 
+    border: solid black;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-family: var(--fonte-destaque);
+    line-height: 2em;
+    font-weight: bold;  
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.texto {
+    flex-direction: column; 
+    align-items: center;
+    width: 100%; 
+    max-width: 45%; 
+    box-sizing: border-box; 
+}
+
+.container-pq {
+    display: flex;
+    text-align: justify;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    padding: 8px;
+    width: 40%;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 3px 3px 8px black;
+    flex-direction: column;
+}
+
+.container-pq > ul {
+    list-style-type: '\1F5F8\00A0\00A0';
+    list-style-position: inside;
+    padding: 0px;
+    margin: 0px;   
+}
+
+.image-container {
+    line-height: 2em;
+    text-align: center; 
+    margin: 7px;
+}
+
+footer {
+    background-color: black;   
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #B8B0F5;
+}
