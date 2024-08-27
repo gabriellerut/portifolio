@@ -75,8 +75,8 @@ nav > a:focus {
 }
 
 main {
-    min-width: 300px;
-    max-width: 1000px;
+    min-width: 1em;
+    max-width: 50em;
     margin: auto;
     margin-bottom: 30px;
     padding: 20px;
