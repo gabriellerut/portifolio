@@ -13,6 +13,10 @@
     .container {
       flex-direction:row;
     }
+    main {
+        width: 100%;
+        padding: 10px;
+    }
   }
 
 :root {
@@ -75,7 +79,7 @@ nav > a:focus {
 }
 
 main {
-    min-width: 1em;
+    width: 90%;
     max-width: 50em;
     margin: auto;
     margin-bottom: 30px;
